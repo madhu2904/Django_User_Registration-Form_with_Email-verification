@@ -1,0 +1,32 @@
+.global
+{
+    display:flex;
+    align-items: center;
+    flex-direction: row;
+    
+    
+}
+.card{
+   background-color:lightblue;
+    justify-content: center;
+    align-self: center;
+    align-content: center;
+    border-style: solid;
+    border: 20px;
+    border-color: black;
+    
+}
+.card-text
+{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+}
+.card-title{
+    color: black;
+}
+.sign-up{
+    
+    font-size: smaller;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}

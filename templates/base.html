@@ -1,0 +1,51 @@
+{% load static %}
+{% block body%}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href= {% static 'main.css' %} rel="stylesheet">
+</head>
+<body>
+<div class="global">
+    <div class="card" > 
+        <div class="card-title">
+            <h3>Register Here</h3> </div> 
+        <div class="content">
+<form action="" method="POST">
+        {% csrf_token %}
+        {% if messages %}
+        {% for message in messages %}
+        {{message}}
+        {% endfor %}
+        {% endif %}
+        
+        <span class="card-text">{{forms.username.label_tag}}</span> 
+        <br>
+        {{forms.username}}
+        <br>
+        <span class="card-text">{{forms.email.label_tag}}</span>
+        <br>
+        {{forms.email}}
+        <br>
+        <span class="card-text">{{forms.password.label_tag}}</span>
+        <br>
+        {{forms.password}}
+        <br>
+        {{forms.password.help_text}}
+        <span class="card-text">{{forms.password_confirm.label_tag}}</span>
+        <br>
+        {{forms.password_confirm}}
+        <br>
+        <input type="submit" style="margin-top: 30px; margin-left: 60px;"></input>
+        <div class="sign-up" style="text-align:center;color:black">
+            Have an account already? <a href="{% url 'Auth:index' %}">Login</a>
+        </form>
+        </div>
+        </div>
+    </div>
+</div>
+</body>
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+{% block body%}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href= {% static 'main.css' %} rel="stylesheet">
+</head>
+<body>
+<div class="global">
+    <div class="card" > 
+        <div class="card-title">
+            <h3>Logon To Your Account</h3> </div>
+           
+        <div class="content">
+            <form action="" method="POST"> 
+                {% csrf_token %} 
+        <span class="card-text">{{forms.username.label_tag}}</span>
+        <br>
+        {{forms.username}}
+        <br>
+        <span class="card-text">{{forms.password.label_tag}}</span>
+        <br>
+        {{forms.password}}
+        <br>
+        {{forms.password.help_text}}
+            <input type="submit" style="margin-top: 30px; margin-left: 60px;"></input>
+            <div class="sign-up" style="color:black">
+                Don't have an account? <a href="{% url 'Auth:register' %}">Create One</a>
+            </div>
+        </form>
+        </div>
+    </div>
+</div>
+
+</body>
+
+{% endblock %}

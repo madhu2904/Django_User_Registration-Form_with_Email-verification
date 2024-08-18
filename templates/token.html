@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+{% block body%}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href= {% static 'main.css' %} rel="stylesheet">
+</head>
+<body>
+    <div class="global">
+        <div class="card">
+            WE HAVE SENT YOU MAIL<br>
+
+            Please check your email for login verification
+        </div>
+    </div>
+</body>
+
+{% endblock %}
